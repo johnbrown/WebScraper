@@ -1,0 +1,17 @@
+{
+    "name": "brown298/DellScraper",
+    "description": "Scrapes Dell's Website",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "John Brown",
+            "email": "brown.john@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "fabpot/goutte": "v1.0.1"
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <title><?php echo $title;?></title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <p><?php echo $description; ?></p>
+
+        <h2>Results</h2>
+
+        <?php foreach ($results as $id => $data): ?>
+
+            <h3>Product: <?php echo $id; ?></h3>
+
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <th>Name</th>
+                    <td><?php echo (isset($data[ 'Product Name' ])) ? $data[ 'Product Name' ] : 'Unknown';?></td>
+                </tr>
+                <tr>
+                    <th>Model</th>
+                    <td><?php echo (isset($data[ 'Model' ])) ? $data[ 'Model' ] : 'Unknown';?></td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>
+                        $<?php echo (isset($data[ 'Price' ])) ? $data[ 'Price' ] : 'Unknown';?>
+                        <?php echo (isset($data[ 'priceCurrency' ])) ? $data[ 'priceCurrency' ] : '';?>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        <?php endforeach; ?>
+    </div>
+</div>
+</body>
+</html>
